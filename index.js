@@ -3,6 +3,8 @@ const app = express()
 const bodyParser = require('body-parser')
 const request = require('request')
 
+const port = process.env.PORT || 9487;
+
 app.use(bodyParser.json())
 
 app.get('/', function (req, res) {
@@ -97,6 +99,6 @@ function toChinese(choose) {
     }
 }
 
-app.listen(9487, function () {
+app.listen(PORT, function () {
     console.log('Example app listening on port 9487!')
 })
